@@ -20,7 +20,9 @@ public class Personnel implements Printer {
     this.nom = builder.nom;
     this.prenom = builder.prenom;
     this.fonction = builder.fonction;
+    this.birthDate = builder.birthDate;
     this.phoneNumbers = builder.phoneNumbers;
+
   }
 
   public static class Builder {
@@ -33,7 +35,7 @@ public class Personnel implements Printer {
     // Paramètres optionnels
     private ArrayList<PhoneNumber> phoneNumbers = new ArrayList<PhoneNumber>();
 
-    private LocalDate birthDate = LocalDate.of(1970, 01, 01);
+    private LocalDate birthDate = LocalDate.parse("1970-01-01");
 
     public Builder(String nom, String prenom, String fonction) {
       this.nom = nom;

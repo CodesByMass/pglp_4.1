@@ -1,8 +1,9 @@
 package com.main;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class CompositePersonnel implements Printer {
+public class CompositePersonnel implements Printer, Iterable<Printer> {
 
   private String nomGroupe;
   private ArrayList<Printer> listPersonnel;
@@ -39,5 +40,10 @@ public class CompositePersonnel implements Printer {
     } else {
       throw new IllegalArgumentException("Cet élément n'existe pas");
     }
+  }
+
+  public Iterator iterator() {
+    // TODO Auto-generated method stub
+    return this.listPersonnel.iterator();
   }
 }
