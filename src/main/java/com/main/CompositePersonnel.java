@@ -17,7 +17,11 @@ public class CompositePersonnel implements Printer {
     this.listPersonnel = liste;
   }
 
+  public ArrayList<Printer> getPersonnel() {
+    return this.getPersonnel();
+    // return ( ArrayList<InterfacePersonne>) Collections.unmodifiableList(this.personnel);
 
+  }
 
   public void print() {
     for (Printer personnel : listPersonnel) {
