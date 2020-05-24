@@ -41,7 +41,7 @@ public class Personnel implements Printer {
       this.fonction = fonction;
     }
 
-    public Builder Date(LocalDate birthDate) {
+    public Builder addBirthDate(LocalDate birthDate) {
       this.birthDate = birthDate;
       return this;
     }
