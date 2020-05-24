@@ -31,7 +31,6 @@ public class PersonnelTest {
 
   @Test
   public void testPersonnelbirthDate() {
-    System.out.println(p.getBirthDate());
     assertTrue(p.getBirthDate().equals(LocalDate.parse("1998-09-07")));
   }
 
