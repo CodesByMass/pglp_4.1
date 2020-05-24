@@ -3,7 +3,7 @@ package com.main;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Personnel {
+public class Personnel implements Printer {
 
   private String nom;
 
@@ -74,6 +74,12 @@ public class Personnel {
 
   public LocalDate getBirthDate() {
     return birthDate;
+  }
+
+  public void print() {
+    System.out
+        .println("Hello, i am " + this.prenom + " " + this.nom + " and i work as " + this.fonction);
+
   }
 
 }
