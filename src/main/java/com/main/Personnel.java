@@ -3,7 +3,13 @@ package com.main;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Personnel implements Printer {
+/**
+ * Classe qui définit un employé.
+ *
+ * @author Mass'
+ *
+ */
+public class Personnel implements PrintPersonnel {
 
   private String nom;
 
@@ -16,6 +22,11 @@ public class Personnel implements Printer {
   private LocalDate birthDate;
 
 
+  /**
+   * Construction de Personnel.
+   *
+   * @param builder le builder qui crée l'instance de personnel avec les paramètres optionnels
+   */
   public Personnel(Builder builder) {
     this.nom = builder.nom;
     this.prenom = builder.prenom;
@@ -25,6 +36,12 @@ public class Personnel implements Printer {
 
   }
 
+  /**
+   * Builder de la classe Personnel.
+   *
+   * @author Mass'
+   *
+   */
   public static class Builder {
     private String nom;
 
@@ -32,7 +49,7 @@ public class Personnel implements Printer {
 
     private String fonction;
 
-    // Param�tres optionnels
+    // Param�tres optionnels
     private ArrayList<PhoneNumber> phoneNumbers = new ArrayList<PhoneNumber>();
 
     private LocalDate birthDate = LocalDate.parse("1970-01-01");
@@ -78,6 +95,7 @@ public class Personnel implements Printer {
     return birthDate;
   }
 
+  @Override
   public void print() {
     System.out
         .println("Hello, i am " + this.prenom + " " + this.nom + " and i work as " + this.fonction);

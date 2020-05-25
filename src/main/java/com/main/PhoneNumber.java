@@ -1,5 +1,11 @@
 package com.main;
 
+/**
+ * Définit le type du numéro de téléphone.
+ *
+ * @author Mass'
+ *
+ */
 public class PhoneNumber {
 
   private String type;
