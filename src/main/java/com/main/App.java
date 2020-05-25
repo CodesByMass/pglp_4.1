@@ -10,12 +10,12 @@ public enum App {
 
   private CompositePersonnel init() {
     Builder b1 = new Builder("Massyl", "Selmi", "Informaticien")
-        .addBirthDate(LocalDate.parse("1998-09-07", DateTimeFormatter.ISO_DATE))
+        .addBirthDate(LocalDate.parse("1998-07-09", DateTimeFormatter.ISO_DATE))
         .addNumber(new PhoneNumber("Mobile", "00000000000"))
         .addNumber(new PhoneNumber("Domicile", "000000000"));
 
     Builder b2 = new Builder("Yumi", "Chastan", "Avocate")
-        .addBirthDate(LocalDate.parse("1999-15-06", DateTimeFormatter.ISO_DATE))
+        .addBirthDate(LocalDate.parse("1999-06-12", DateTimeFormatter.ISO_DATE))
         .addNumber(new PhoneNumber("Mobile", "111111111111"))
         .addNumber(new PhoneNumber("Domicile", "11111111111111"));
     Personnel p1 = b1.build();
@@ -32,6 +32,7 @@ public enum App {
 
   private void run(String[] args) {
     CompositePersonnel cp1 = init();
+    cp1.iterator();
 
 
   }

@@ -30,14 +30,10 @@ public class CompositePersonnel implements PrintPersonnel, Iterable<PrintPersonn
     this.listPersonnel = liste;
   }
 
-  /**
-   *
-   * @return les membres du groupe.
-   */
-  public ArrayList<PrintPersonnel> getPersonnel() {
-    return this.getPersonnel();
-    // return ( ArrayList<InterfacePersonne>) Collections.unmodifiableList(this.personnel);
 
+
+  public ArrayList<PrintPersonnel> getPersonnel() {
+    return listPersonnel;
   }
 
   @Override
